@@ -11,10 +11,23 @@
 </head>
 
 <body>
-    <header class="container text-center">
-        <img src="img/foto-perfil.jpg" alt="foto da Pietra">
+    <header class="container text-center p-5">
+        <!-- Menu de Acessibilidade -->
+        <div id="acessibilidade" class="menu-acessibilidade">
+            <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false" aria-label="Menu de acessibilidade">Acessibilidade</button>
+            <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
+                <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
+                <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
+                <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alternar o contraste de cores"> <i class="bi bi-shadows"></i></button>
+            </div>
+        </div>
+
+        <!-- Foto de perfil e informações -->
+        <img src="img/foto-perfil.jpg" alt="foto de Pietra, uma jovem sorrindo e com cabelo curto" class="img-fluid">
         <h1>Pietra</h1>
-        <p class="lead">Oi! Eu sou a Pietra, tenho 17 anos e quero ser tatuadora. Sempre amei esse mundo e desde pequena treino fazendo “tatuagens” de caneta nos meus amigos. É meu hobby, meu sonho e meu futuro trabalho! Também gosto de malhar, ouvir música (principalmente funk), sair com meus amigos, rir bastante e dormir bem.</p>
+        <p class="lead">Oi! Eu sou a Pietra, tenho 17 anos e quero ser tatuadora...</p>
+
+        <!-- Habilidades -->
         <div class="mt-3">
             <h5>Habilidades</h5>
             <ul class="list-inline">
@@ -32,7 +45,7 @@
             <!-- Projeto 1 -->
             <div class="col-md-4">
                 <div class="card">
-                    <img src="img/foto-projeto-1.jpg" class="card-img-top" alt="Desenho feito com caneta na pele">
+                    <img src="img/foto-projeto-1.jpg" class="card-img-top" alt="Desenho feito com caneta na pele, mostrando o estilo das tatuagens que faço" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Tatuagens de Caneta</h5>
                         <p class="card-text">Desde criança treino tatuando meus amigos com caneta. Aqui é onde minha criatividade voa!</p>
@@ -44,7 +57,7 @@
             <!-- Projeto 2 -->
             <div class="col-md-4">
                 <div class="card">
-                    <img src="img/foto-projeto-2.jpg" class="card-img-top" alt="Imagem de uma bola de futebol">
+                    <img src="img/foto-projeto-2.jpg" class="card-img-top" alt="Imagem de uma bola de futebol, simbolizando a paixão de Pietra por futebol e embaixadinhas" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Futebol & Embaixadinhas</h5>
                         <p class="card-text">Amo jogar bola! E sim, eu sei mandar bem nas embaixadinhas também 😎</p>
@@ -56,7 +69,7 @@
             <!-- Projeto 3 -->
             <div class="col-md-4">
                 <div class="card">
-                    <img src="img/foto-projeto-3.jpg" class="card-img-top" alt="Imagem relacionada à edição de vídeos">
+                    <img src="img/foto-projeto-3.jpg" class="card-img-top" alt="Imagem relacionada à edição de vídeos, mostrando o processo criativo" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Edição de Vídeos</h5>
                         <p class="card-text">Gosto de editar vídeos criativos com músicas e efeitos. Colocar minha vibe em cada frame!</p>
@@ -75,7 +88,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Desde pequena eu desenho direto na pele com caneta. Começou como brincadeira entre amigos, e virou minha paixão. Sonho em ser tatuadora profissional e já imagino meu estúdio cheio de desenhos autorais e muito estilo.</p>
+                        <p>Desde pequena eu desenho direto na pele com caneta. Começou como brincadeira entre amigos...</p>
                     </div>
                 </div>
             </div>
@@ -90,7 +103,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Jogar bola me dá energia! Não é só um esporte, é diversão pura com meus amigos. E nas embaixadinhas, já consigo manter várias seguidas, viu? Um talento que veio de tanto brincar na rua e curtir o momento.</p>
+                        <p>Jogar bola me dá energia! Não é só um esporte, é diversão pura com meus amigos...</p>
                     </div>
                 </div>
             </div>
@@ -105,7 +118,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Adoro pegar vídeos do dia a dia e transformar em algo engraçado, bonito ou que tenha a minha cara. Uso aplicativos no celular, coloco efeitos, transições e música. É meu jeito de mostrar criatividade com ritmo!</p>
+                        <p>Adoro pegar vídeos do dia a dia e transformar em algo engraçado, bonito ou que tenha a minha cara...</p>
                     </div>
                 </div>
             </div>
@@ -120,6 +133,24 @@
         </div>
         <p class="my-5 text-center">© Copyright 2025. Produzido por Pietra</p>
     </footer>
+
+    <!-- Scripts para funcionalidades de acessibilidade -->
+    <script>
+        // Função para aumentar a fonte
+        document.getElementById("aumentar-fonte").addEventListener("click", function() {
+            document.body.style.fontSize = "larger";
+        });
+
+        // Função para diminuir a fonte
+        document.getElementById("diminuir-fonte").addEventListener("click", function() {
+            document.body.style.fontSize = "smaller";
+        });
+
+        // Função para alternar contraste
+        document.getElementById("alterna-contraste").addEventListener("click", function() {
+            document.body.classList.toggle("alto-contraste");
+        });
+    </script>
 </body>
 
 </html>
