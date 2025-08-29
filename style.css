@@ -128,6 +128,7 @@ h2 {
     background-color: #F1EDEF;
 }
 
+/* Menu de Acessibilidade */
 .menu-acessibilidade {
     position: fixed;
     top: 2rem;
@@ -135,9 +136,20 @@ h2 {
     z-index: 1000;
 }
 
+/* Botão de engrenagem */
+#botao-acessibilidade {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+/* Mantém a classe rotacao-botao, mas sem rotação */
 .rotacao-botao {
-    transform: rotate(-90deg);
-    transform-origin: right center;
+    transform: rotate(0deg);
 }
 
 .opcoes-acessibilidade {
@@ -154,6 +166,7 @@ h2 {
     display: none;
 }
 
+/* Contraste alto */
 .alto-contraste {
     background-color: var(--alto-contraste-fundo);
     color: var(--alto-contraste-texto);
