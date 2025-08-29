@@ -28,16 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Alternar alto contraste
+  // Alternar alto contraste (inclui imagens em escala de cinza)
   alternaContraste.addEventListener("click", () => {
     document.body.classList.toggle("alto-contraste");
 
-    // Atualiza texto para acessibilidade (ARIA)
     const ativo = document.body.classList.contains("alto-contraste");
+
+    // Atualiza texto para acessibilidade (ARIA)
     alternaContraste.setAttribute(
       "aria-label",
       ativo ? "Desativar contraste de cores" : "Ativar contraste de cores"
     );
+
+    // Deixar imagens em escala de cinza no modo contraste
+    const imagens = document.querySelectorAll("img");
+    imagens.forEach(img => {
+      if (ativo) {
+        img.style.filter = "grayscale(100%) contrast(120%)";
+      } else {
+        img.style.filter = "none";
+      }
+    });
   });
 
   // Melhor acessibilidade: fechar menu com ESC
